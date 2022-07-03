@@ -7,6 +7,10 @@ function Navbar() {
         <h3>
             <Link to="/">Koutsobolio</Link>
         </h3>
+        <div>
+            <Link to="/register">Register</Link>
+            <Link to="/login">Login</Link>
+        </div>
     </nav>
   )
 }
