@@ -5,6 +5,7 @@ import { signOut } from "firebase/auth";
 import { updateDoc, doc } from "firebase/firestore";
 import { AuthContext } from "../context/auth";
 import { useNavigate } from "react-router-dom";
+
 function Navbar() {
   const { user } = useContext(AuthContext);
   const navigate = useNavigate()
