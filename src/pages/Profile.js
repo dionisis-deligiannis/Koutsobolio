@@ -46,6 +46,7 @@ function Profile() {
       }
       uploadImg();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [img]);
   function handleChange(e) {
     setImg(e.target.files[0]);

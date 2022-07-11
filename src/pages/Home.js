@@ -12,17 +12,18 @@ export default function Home() {
     // execute query
     const unsub = onSnapshot(q, (querySnapshot) => {
       querySnapshot.forEach((doc) => {
-        let users = [];
-        users.push(doc.data());
+        setUsers((current) => [...current, doc.data()]);
       });
-      setUsers(users);
     });
     return () => unsub();
   }, []);
+  
   return (
     <div className="home_container">
       <div className="users_container">
-        {users.map(user => <User key={user.uid} user={user}/>)}
+        {users.map((user) => (
+          <User key={user.uid} user={user} />
+        ))}
       </div>
     </div>
   );
