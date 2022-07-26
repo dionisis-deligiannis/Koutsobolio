@@ -193,6 +193,27 @@ section .form{
   background: var(--color-5);
 }
 
+.selected_user{
+  background: var(--color-6);
+}
+.truncate{
+  font-size: 14px;
+  white-space: nowrap;
+  width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.truncate strong{
+  margin: 7px;
+}
+.unread{ 
+  margin: 7px;
+  background: var(--color-3);
+  color: white;
+  padding: 2px 4px;
+  border-radius: 10px;
+
+}
 /* Message Page */
 .messages_container{
   position: relative;
@@ -258,4 +279,50 @@ section .form{
 }
 .friend {
   background-color: var(--color-6);
+}
+
+.sm_screen{
+  display: none;
+}
+
+
+@media screen and (max-width: 767px) {
+  .home_container{
+    grid-template-columns: 2fr 3fr;
+  }
+  .messge_form{
+    left: 3%;
+    right: 0;
+    bottom: 5px;
+  }
+  .message_wrapper p{
+    max-width: 75%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .home_container{
+    grid-template-columns: 1fr 5fr;
+  }
+  .user_wrapper{
+    display: none;
+  }
+  .sm_container{
+    padding: 10px 0px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .sm_screen {
+    display: inline-block;
+  }
+  .message_form input{
+    width: 50vw;
+    margin: 0px 10px;
+  }
+  .message_form .btn{
+    margin: 0;
+  }
+  .message_wrapper p{
+    max-width: 100%;
+  }
 }
